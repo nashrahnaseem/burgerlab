@@ -127,3 +127,23 @@ document.querySelector(".btn-lettuce").onclick = function () {
 //Judgement 1
 //In the p element having price-details as the class, display the calculated
 //price based on ingredients
+function renderPrice() {
+  const submit = document.querySelector(".Rectangle5");
+ 
+
+submit.onclick = (evt) => {
+  var sum = 20;
+  if(state.Patty)
+  sum = sum +parseInt(ingredients.Patty);
+  if(state.Cheese)
+  sum = sum +parseInt(ingredients.Cheese);
+  if(state.Tomatoes)
+  sum = sum +parseInt(ingredients.Tomatoes);
+  if(state.Onions)
+  sum = sum +parseInt(ingredients.Onions);
+  if(state.Lettuce)
+  sum = sum +parseInt(ingredients.Lettuce);
+  document.querySelector(".price-details").innerHTML = "INR"+sum;
+}
+}
+renderPrice();
